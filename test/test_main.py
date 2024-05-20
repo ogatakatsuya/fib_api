@@ -1,23 +1,15 @@
-from fastapi.testclient import TestClient
-from main import app
+import sys
+import os
+
+# 親ディレクトリをsys.pathに追加してmainをインポート
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/')))
+
+from app import app
+import pytest
 import json
 
-client = TestClient(app)
-
-def test_read_main():
-    response = client.get("/")
+def test_index_route():
+    response = app.test_client().get('/fib?n=5')
+    data = json.loads(response.data)
     assert response.status_code == 200
-    print("★")
-    print(response.json())
-    print(response.json()['message'])
-    print("★★")
-    assert response.json() == {"message":"Hello"}
-    
-def test_read_zipcode():
-    response = client.get(f'/zipcode?zipcode=9012303')
-    print("test_read_zipcode")
-    assert response.status_code == 200
-    print(response.json()['results'])
-    
-    assert response.json()['results'][0]['address1'] == '沖縄県'
-   
+    assert data['result'] == 5
