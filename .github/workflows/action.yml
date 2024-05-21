@@ -31,6 +31,6 @@ jobs:
         with:
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
-          
-    - name: Set job status
-      run: exit 0
+
+      - name: Set job status
+        run: exit 0
