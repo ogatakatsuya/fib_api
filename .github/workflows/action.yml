@@ -11,7 +11,7 @@ jobs:
     steps:
       # リポジトリをチェックアウト
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # - name: generate .env
       #   run: chmod +x set-up-env.action.sh && sh set-up-env.action.sh
