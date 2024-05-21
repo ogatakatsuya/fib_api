@@ -4,7 +4,7 @@ services:
   api:
     container_name: fib_api
     build:
-      dockerfile: ./src/Dockerfile
+      dockerfile: ./Dockerfile
       context: .
     ports:
       - "5000:5000"
