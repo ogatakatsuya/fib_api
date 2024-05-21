@@ -25,3 +25,21 @@ def test_5():
     data = json.loads(response.data)
     assert response.status_code == 200
     assert data['result'] == 5
+    
+def test_missing_parameter():
+    response = app.test_client().get('/fib')
+    data = json.loads(response.data)
+    assert response.status_code == 400
+    assert data['message'] == 'Parameter n is missing'
+    
+def test_non_numeric_parameter():
+    response = app.test_client().get('/fib?n=abc')
+    data = json.loads(response.data)
+    assert response.status_code == 400
+    assert data['message'] == 'Parameter n must be a number.'
+    
+def test_zero():
+    response = app.test_client().get('/fib?n=0')
+    data = json.loads(response.data)
+    assert response.status_code == 400
+    assert data['message'] == 'Parameter n must be a positive integer.'
