@@ -18,19 +18,19 @@ jobs:
           docker-compose build
           docker-compose up -d
           docker-compose run api pytest --cov --cov-branch --cov-report=term-missing --junitxml=pytest.xml test | tee pytest-coverage.txt
-
       # テスト結果をプルリクにコメントする
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
         with:
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
-      
-    steps:
-      - uses: actions/checkout@v4
-      - uses: akhileshns/heroku-deploy@v3.13.15
+
+      # デプロイ
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.13.15
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.MY_EMAIL}}
           stack: "container"
+
