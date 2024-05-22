@@ -12,7 +12,7 @@ services:
       - type: bind
         source: ./
         target: /app
-    command: flask run --host=0.0.0.0
+    command: flask run
     environment:
       - DEBUG=1
       - FLASK_APP=app.py
