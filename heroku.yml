@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: flask run
+  web: python app.py
