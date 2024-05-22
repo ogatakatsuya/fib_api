@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: gunicorn --chdir src app:app --log-file - 
+  web: gunicorn app:app --log-file - 
