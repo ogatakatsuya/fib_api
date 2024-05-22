@@ -2,7 +2,7 @@ import sys
 import os
 
 # 親ディレクトリをsys.pathに追加してmainをインポート
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 
 from app import app
 import pytest
