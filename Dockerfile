@@ -5,5 +5,3 @@ WORKDIR /app
 COPY ./requirements.txt ./
 
 RUN pip install -r requirements.txt
-
-CMD gunicorn attakait_hp.wsgi --log-file -

@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask_restx import Resource, Api, fields
-from fib import fib
+from src.fib import fib
 
 app = Flask(__name__)
 api = Api(app)
