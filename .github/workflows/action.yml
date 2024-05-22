@@ -11,13 +11,7 @@ jobs:
     steps:
       # リポジトリをチェックアウト
       - name: Checkout
-        uses: actions/checkout@v3
-
-      # - name: generate .env
-      #   run: chmod +x set-up-env.action.sh && sh set-up-env.action.sh
-      #   env:
-      #     ENVIRONMENT_VARIABLE1: ${{ secrets.ENVIRONMENT_VARIABLE1 }}
-      #     ENVIRONMENT_VARIABLE2: ${{ secrets.ENVIRONMENT_VARIABLE2 }}
+        uses: actions/checkout@v4
 
       - name: Run Tests
         run: |
@@ -31,6 +25,10 @@ jobs:
         with:
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
-
-      - name: Set job status
-        run: exit 0
+      
+      - name: Login to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{secrets.MY_EMAIL}}
