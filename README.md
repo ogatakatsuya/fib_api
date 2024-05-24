@@ -28,15 +28,30 @@ docker compose up --build
 
 ## Request and Response
 
-### example
-request
+### Example
+Request:
 ```
 curl -X GET -H "Content-Type: application/json" "https://fib-api-ad20472c44e6.herokuapp.com/fib?n=99"
 ```
 
-response
+Response:
 ```
-{"result": 218922995834555169026}
+{
+  "result": 218922995834555169026
+}
+```
+
+Request:
+```
+curl -X GET -H "Content-Type: application/json" "https://fib-api-ad20472c44e6.herokuapp.com/fib?n=abc"
+```
+
+Response:
+```
+{
+  "status": 400,
+  "message": "Parameter n must be a number."
+}
 ```
 
 ## Author
