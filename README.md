@@ -1,8 +1,29 @@
 # fib_api
 
-URL : https://fib-api-ad20472c44e6.herokuapp.com/
+## Overview
+n番目のフィボナッチ数列の値を返すREST API
 
-# ファイル構成
+エンドポイント : https://fib-api-ad20472c44e6.herokuapp.com/
+
+## Requirement
+### OS
+- macOS 13.4
+
+### Library
+- Python
+  - Flask
+- Docker
+- docker-compose
+
+## Usage
+
+## Features
+
+## Reference
+
+## Author
+
+## ファイル構成
 
 ```
 .
