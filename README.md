@@ -26,7 +26,14 @@ docker compose up --build
 ```
 ## Features
 
-## Reference
+## Request and Response
+
+###example
+request
+`curl -X GET -H "Content-Type: application/json" "https://fib-api-ad20472c44e6.herokuapp.com/fib?n=99"`
+
+response
+`{"result": 218922995834555169026}`
 
 ## Author
 [Ogata Katsuya](https://github.com/ogatakatsuya)
