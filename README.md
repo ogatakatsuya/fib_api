@@ -16,14 +16,17 @@ n番目のフィボナッチ数列の値を返すREST API
 - docker-compose
 
 ## Usage
-
+1. Clone this repository
+`git clone https://github.com/ogatakatsuya/fib_api.git`
+2. Build and Boot
+`docker compose up --build`
 ## Features
 
 ## Reference
 
 ## Author
-
-## ファイル構成
+[Ogata Katsuya](https://github.com/ogatakatsuya)
+## File structure
 
 ```
 .
