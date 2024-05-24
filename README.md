@@ -17,9 +17,13 @@ n番目のフィボナッチ数列の値を返すREST API
 
 ## Usage
 1. Clone this repository
-`git clone https://github.com/ogatakatsuya/fib_api.git`
-2. Build and Boot
-`docker compose up --build`
+```
+git clone https://github.com/ogatakatsuya/fib_api.git
+```
+3. Build and Boot
+```
+docker compose up --build
+```
 ## Features
 
 ## Reference
