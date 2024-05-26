@@ -56,7 +56,7 @@ Response:
 ```
 
 ## Features
-[Click Me]([https://github.com/ogatakatsuya](https://github.com/ogatakatsuya/fib_api/blob/main/Feature.md))
+[Click Me](https://github.com/ogatakatsuya/fib_api/blob/main/Feature.md)
 
 ## Author
 [Ogata Katsuya](https://github.com/ogatakatsuya)
