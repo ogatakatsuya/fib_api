@@ -17,7 +17,7 @@ n番目のフィボナッチ数列の値を返すREST API
 - Docker
 - docker-compose
 
-## Usage
+## Usage(Local)
 1. Clone this repository
 ```sh
 git clone https://github.com/ogatakatsuya/fib_api.git
@@ -56,7 +56,7 @@ Response:
 ```
 
 ## Features
-[こちら](https://github.com/ogatakatsuya)
+[Click Me](https://github.com/ogatakatsuya/fib_api/blob/main/Feature.md)
 
 ## Author
 [Ogata Katsuya](https://github.com/ogatakatsuya)

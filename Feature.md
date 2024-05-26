@@ -11,7 +11,7 @@
 - **環境構築**: Docker
 - **CI/CD**: GitHub Actions
 
-### 構成
+## 構成
 
 - `Dockerfile`: アプリケーションのDockerイメージを構築するための設定ファイル。
 - `README.md`: プロジェクトの概要と設定方法を説明するドキュメント。
@@ -33,12 +33,12 @@
     cd your-repo-name
     ```
 
-1. Dockerコンテナをビルドして起動します。
+2. Dockerコンテナをビルドして起動します。
     ```sh
     docker-compose up --build
     ```
 
-2. アプリケーションにアクセスします。
+3. アプリケーションにアクセスします。
     - ローカル環境では、 `http://localhost:5000` にアクセスできます。
 
 ## テスト
@@ -65,3 +65,4 @@ GitHub Actionsを用いて、以下のCI/CDパイプラインを実現してい�
 ## コンタクト
 
 質問やフィードバックがあれば、`katsuya151225@icloud.com` までご連絡ください。
+
