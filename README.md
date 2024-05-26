@@ -17,12 +17,6 @@ n番目のフィボナッチ数列の値を返すREST API
 - Docker
 - docker-compose
 
-### CI/CD
-- Github Actions
-
-### Deploy
-- Heroku
-
 ## Usage
 1. Clone this repository
 ```sh
