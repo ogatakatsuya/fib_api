@@ -12,6 +12,8 @@ n番目のフィボナッチ数列の値を返すREST API
 ### Library
 - Python
   - Flask
+  - Flask-RESTX
+  - Pytest
 - Docker
 - docker-compose
 
@@ -24,7 +26,6 @@ git clone https://github.com/ogatakatsuya/fib_api.git
 ```
 docker compose up --build
 ```
-## Features
 
 ## Request and Response
 
@@ -53,6 +54,13 @@ Response:
   "message": "Parameter n must be a number."
 }
 ```
+
+## Features
+PythonのフレームワークであるFlaskを用いて実装を行い，今回はFlask-RESTXというライブラリを用いてREST APIを実装しました．
+テストはPytestを用いて行い，デプロイはherokuに行いました．
+環境構築はDockerを用いて行い，デプロイもコンテナイメージを用いて行いました．
+また，テストとデプロイはGithub Actionsを用いてPR作成時に自動で行えるようにしました．
+テスト結果はPRのコメントに反映されるようにしています．
 
 ## Author
 [Ogata Katsuya](https://github.com/ogatakatsuya)
