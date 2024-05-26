@@ -17,13 +17,19 @@ n番目のフィボナッチ数列の値を返すREST API
 - Docker
 - docker-compose
 
+### CI/CD
+- Github Actions
+
+### Deploy
+- Heroku
+
 ## Usage
 1. Clone this repository
-```
+```sh
 git clone https://github.com/ogatakatsuya/fib_api.git
 ```
 3. Build and Boot
-```
+```sh
 docker compose up --build
 ```
 
@@ -31,7 +37,7 @@ docker compose up --build
 
 ### Example
 Request:
-```
+```sh
 curl -X GET -H "Content-Type: application/json" "https://fib-api-ad20472c44e6.herokuapp.com/fib?n=99"
 ```
 
@@ -43,7 +49,7 @@ Response:
 ```
 
 Request:
-```
+```sh
 curl -X GET -H "Content-Type: application/json" "https://fib-api-ad20472c44e6.herokuapp.com/fib?n=abc"
 ```
 
@@ -56,11 +62,7 @@ Response:
 ```
 
 ## Features
-PythonのフレームワークであるFlaskを用いて実装を行い，今回はFlask-RESTXというライブラリを用いてREST APIを実装しました．
-テストはPytestを用いて行い，デプロイはherokuに行いました．
-環境構築はDockerを用いて行い，デプロイもコンテナイメージを用いて行いました．
-また，テストとデプロイはGithub Actionsを用いてPR作成時に自動で行えるようにしました．
-テスト結果はPRのコメントに反映されるようにしています．
+[こちら](https://github.com/ogatakatsuya)
 
 ## Author
 [Ogata Katsuya](https://github.com/ogatakatsuya)
