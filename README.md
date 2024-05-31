@@ -22,7 +22,7 @@ n番目のフィボナッチ数列の値を返すREST API
 ```sh
 git clone https://github.com/ogatakatsuya/fib_api.git
 ```
-3. Build and Boot
+2. Build and Boot
 ```sh
 docker compose up --build
 ```
